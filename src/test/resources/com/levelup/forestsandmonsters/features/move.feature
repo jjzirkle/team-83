@@ -16,3 +16,7 @@ Feature: Move in a direction
             | startingPositionX | startingPositionY | direction | startingMoveCount | endingPositionX | endingPositionY | endingMoveCount |
             | 0 | 0 | NORTH | 10 | 0 | 1 | 11 |
             | 0 | 0 | SOUTH | 32 | 0 | 0 | 33 |
+            | 0 | 9 | NORTH | 33 | 0 | 10 | 34 | 
+            | 5 | 5 | EAST | 1 | 6 | 5 | 2 |
+            | 5 | 5 | WEST | 1 | 4 | 5 | 2 |
+            | 5 | 5 | WEST | 1 | 3 | 5 | 2 |

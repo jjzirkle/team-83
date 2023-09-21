@@ -13,3 +13,4 @@ public class LevelUpMain {
         SpringApplication.run(LevelUpMain.class, fullArgs);
     }
 }
+

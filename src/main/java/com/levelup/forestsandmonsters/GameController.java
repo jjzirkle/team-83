@@ -11,7 +11,7 @@ public class GameController {
         public String characterName = DEFAULT_CHARACTER_NAME;
         public Point currentPosition = null;
         public int startX = 0;
-        public int startY = 0;
+        public int startY = 0;  
         public int endX = 0;
         public int endY = 0;
         // TODO: Write a failing unit test that will force you to set this to the right number
@@ -48,6 +48,10 @@ public class GameController {
 
     public GameStatus getStatus() {
         return this.status;
+    }
+
+    public void World() {
+        
     }
 
     public void move(DIRECTION directionToMove) {
