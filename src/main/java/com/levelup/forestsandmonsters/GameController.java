@@ -1,11 +1,11 @@
 package com.levelup.forestsandmonsters;
 
 import java.awt.Point;
-
+import  com.levelup.forestsandmonsters.cli.World;
 public class GameController {
 
     static final String DEFAULT_CHARACTER_NAME = "Character";
-
+    static World world;
     public class GameStatus {
         // TODO: Add other status data
         public String characterName = DEFAULT_CHARACTER_NAME;
@@ -53,9 +53,13 @@ public class GameController {
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
+       int x = status.currentPosition.x;
+       int y = status.currentPosition.y;
             System.out.println("HERE!!!!!!!!!!!!!!!!!!!");
         if (directionToMove.toString() == "NORTH") {
             System.out.println("ENTERED!!!!!!!!!!!!!!!!!!!");
+           world.isValid(new Point(x,y+1));
+         //   world.isKey()
             status.currentPosition.y = status.currentPosition.y + 1;
         }
         if (directionToMove.toString() == "SOUTH") {
