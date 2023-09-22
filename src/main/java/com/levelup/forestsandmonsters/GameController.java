@@ -84,6 +84,7 @@ public class GameController {
                 status.currentPosition.x = status.currentPosition.x + 1;
             }
         }
+        world.printWorld(status.currentPosition.x,status.currentPosition.y);
         status.moveCount += 1;
     }
 

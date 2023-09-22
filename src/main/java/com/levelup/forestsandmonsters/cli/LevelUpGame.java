@@ -46,7 +46,7 @@ public class LevelUpGame implements Quit.Command {
     System.out.println("Would you like to go North(N), South(S), East(E), West(W) or Exit(X)?");
   }
 
-  @ShellMethod(value = "Move North", key = { "N", "n" }, group = "Move")
+  @ShellMethod(value = "Move North", key = { "W", "w" }, group = "Move")
   @ShellMethodAvailability("startedCheck")
   public void moveNorth() {
     gameController.move(GameController.DIRECTION.NORTH);
@@ -60,14 +60,14 @@ public class LevelUpGame implements Quit.Command {
     updateStatus(gameController.getStatus());
   }
 
-  @ShellMethod(value = "Move East", key = { "E", "e" }, group = "Move")
+  @ShellMethod(value = "Move East", key = { "D", "d" }, group = "Move")
   @ShellMethodAvailability("startedCheck")
   public void moveEast() {
     gameController.move(GameController.DIRECTION.EAST);
     updateStatus(gameController.getStatus());
   }
 
-  @ShellMethod(value = "Move West", key = { "W", "w" }, group = "Move")
+  @ShellMethod(value = "Move West", key = { "A", "a" }, group = "Move")
   @ShellMethodAvailability("startedCheck")
   public void moveWest() {
     gameController.move(GameController.DIRECTION.WEST);
