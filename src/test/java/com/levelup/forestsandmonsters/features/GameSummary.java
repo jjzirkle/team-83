@@ -12,7 +12,14 @@ import io.cucumber.java.en.When;
 
 public class GameSummary {
 
+    int totalPositions = 0;
+
     GameSummary testObj = new GameSummary();
     
+    @Given("the total number of moves is {int}")
+    public void givenTotalMoves(int totalPositions) {
+        this.totalPositions = totalPositions;
+    }
+
     
 }
