@@ -4,7 +4,7 @@ import java.awt.Point;
 
 
 public class World {
-    Map<Point,Tile> tiles;
+    public Map<Point,Tile> tiles;
 
     public World(){
         tiles = new HashMap<>();
@@ -13,19 +13,20 @@ public class World {
                tiles.put(new Point(x, y), new Tile()); 
             }
         }
+        // assign random key
     }
 
     public void printWorld(){
 
     }
 
-    public boolean isValid(){
-
-        return false;
+    public boolean isValid(Point p){
+        Tile tile = tiles.get(p);
+        return tile != null ? true : false;
     }
 
-    public boolean isKey(){
-
-        return false;
+    public boolean isKey(Point p){
+        Tile tile = tiles.get(p);
+        return tile.isKey ? true : false;
     }
 }

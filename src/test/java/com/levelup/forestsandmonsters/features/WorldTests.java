@@ -16,18 +16,19 @@ import com.levelup.forestsandmonsters.cli.World;
 
 public class WorldTests {
 
-    World testObj = new World();
+    World world = new World();
     int moveX, moveY;
     Point nextPosition;
     Map<Point,Tile> tiles;
+    String isValid;
     
     @Given("I have a list of valid tiles")
     public void initTiles() {
-        nextPosition = new Point(0, 1)
-        tiles.put(nextPosition, new Tile());
+        nextPosition = new Point(0, 1);
+        world.tiles.put(nextPosition, new Tile());
     }
 
-    @Given("the next X player position {int}")
+    @Given("next X player position {int}")
     public void setNextX(int moveX) {
         this.moveX = moveX;
     }
@@ -40,11 +41,14 @@ public class WorldTests {
     @When("the player validates his movement")
     public void theCharacterMoves() {
         nextPosition = new Point(moveX, moveY);
+        isValid = world.isValid(nextPosition)+"";
     }
 
-    @Then("map should return {boolean}")
-    public void checkXCoordinates(boolean result) {
-        assertEquals(true, result);
+    @Then("map should return {word}")
+    public void isValidMovement(String expected) {
+        assertEquals(expected, isValid);
     }
+
+
 
 }
